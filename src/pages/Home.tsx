@@ -55,7 +55,7 @@ export function Home() {
 
         <p
           ref={subtitleRef}
-          className="mt-8 text-base md:text-lg text-[#a3a3a3] text-center max-w-md leading-relaxed"
+          className="mt-8 text-base md:text-lg text-[#737373] text-center max-w-md leading-relaxed"
         >
           CS &amp; Data Science · Building things that matter
         </p>
@@ -65,7 +65,7 @@ export function Home() {
             href="https://github.com/tylervovan"
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-link text-xs uppercase tracking-widest text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-200"
+            className="hero-link text-xs uppercase tracking-widest text-[#737373] hover:text-[#0a0a0a] transition-colors duration-200"
           >
             GitHub
           </a>
@@ -73,13 +73,13 @@ export function Home() {
             href="https://linkedin.com/in/tyler-vovan-30330b2a8"
             target="_blank"
             rel="noopener noreferrer"
-            className="hero-link text-xs uppercase tracking-widest text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-200"
+            className="hero-link text-xs uppercase tracking-widest text-[#737373] hover:text-[#0a0a0a] transition-colors duration-200"
           >
             LinkedIn
           </a>
           <a
             href="mailto:hello@tylervovan.com"
-            className="hero-link text-xs uppercase tracking-widest text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-200"
+            className="hero-link text-xs uppercase tracking-widest text-[#737373] hover:text-[#0a0a0a] transition-colors duration-200"
           >
             Email
           </a>
@@ -87,15 +87,15 @@ export function Home() {
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
-          <span className="text-[10px] text-[#a3a3a3] uppercase tracking-[0.2em]">Scroll</span>
-          <div className="w-px h-8 bg-gradient-to-b from-[#a3a3a3] to-transparent" />
+          <span className="text-[10px] text-[#737373] uppercase tracking-[0.2em]">Scroll</span>
+          <div className="w-px h-8 bg-gradient-to-b from-[#737373] to-transparent" />
         </div>
       </section>
 
       {/* Featured projects */}
       <section className="px-6 py-[120px]">
         <div className="mx-auto max-w-[1200px]">
-          <h2 className="font-body text-xs uppercase tracking-[0.2em] text-[#a3a3a3] mb-12">
+          <h2 className="font-body text-xs uppercase tracking-[0.2em] text-[#737373] mb-12">
             Selected Work
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -106,7 +106,7 @@ export function Home() {
           <div className="mt-12">
             <Link
               to="/work"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#a3a3a3] hover:text-[#fafafa] transition-colors duration-200"
+              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#737373] hover:text-[#0a0a0a] transition-colors duration-200"
             >
               View all work
               <span aria-hidden>→</span>
@@ -116,9 +116,9 @@ export function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-10 border-t border-white/5">
+      <footer className="px-6 py-10 border-t border-black/8">
         <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="text-xs text-[#a3a3a3]/50">
+          <span className="text-xs text-[#737373]/60">
             © {new Date().getFullYear()} Tyler Vovan
           </span>
           <div className="flex gap-6">
@@ -126,7 +126,7 @@ export function Home() {
               href="https://github.com/tylervovan"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-[#a3a3a3]/50 hover:text-[#a3a3a3] transition-colors"
+              className="text-xs text-[#737373]/60 hover:text-[#737373] transition-colors"
             >
               GitHub
             </a>
@@ -134,7 +134,7 @@ export function Home() {
               href="https://linkedin.com/in/tyler-vovan-30330b2a8"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-[#a3a3a3]/50 hover:text-[#a3a3a3] transition-colors"
+              className="text-xs text-[#737373]/60 hover:text-[#737373] transition-colors"
             >
               LinkedIn
             </a>

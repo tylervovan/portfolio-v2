@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0a0a;
-  --color-subtle: #111111;
-  --color-muted: #a3a3a3;
+  --color-bg: #fafaf8;
+  --color-subtle: #f2f2f0;
+  --color-muted: #737373;
   --color-accent: #2E5CFF;
   --color-accent-alt: #8B5CF6;
 
@@ -21,8 +21,8 @@ html {
 }
 
 body {
-  background-color: #0a0a0a;
-  color: #fafafa;
+  background-color: #fafaf8;
+  color: #0a0a0a;
   font-family: 'DM Sans', sans-serif;
   margin: 0;
   padding: 0;
