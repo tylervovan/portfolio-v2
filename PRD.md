@@ -226,7 +226,7 @@ Design direction: confident minimalism (liumichelle.com influence). Not a templa
 | 3D / WebGL | Three.js (LiquidGlass only) |
 | Smooth scroll | Lenis |
 | Typography | Manrope + DM Sans via Google Fonts |
-| Deployment | Vercel (static SPA) or Cloudflare Pages |
+| Deployment | Cloudflare Pages (domain already on Cloudflare; requires `_redirects` for SPA routing) |
 | Language | TypeScript throughout |
 | Node runtime | Bun |
 | Package manager | Bun |
@@ -234,10 +234,10 @@ Design direction: confident minimalism (liumichelle.com influence). Not a templa
 **Design tokens:**
 
 ```css
---bg:          #0a0a0a
---bg-subtle:   #111111
---text:        #fafafa
---text-muted:  #a3a3a3
+--bg:          #fafaf8
+--bg-subtle:   #f2f2f0
+--text:        #0a0a0a
+--text-muted:  #737373
 --accent:      #2E5CFF
 --accent-alt:  #8B5CF6
 --section-gap: 120px (desktop), 80px (mobile)
@@ -255,23 +255,24 @@ The following are explicitly excluded from this version:
 
 - **Blog or writing section** — no /blog, no MDX content pipeline
 - **Contact form** — email link only; no backend form handling
-- **Dark/light mode toggle** — dark-only for now
+- **Dark/light mode toggle** — light-only for v2
 - **Tag filtering on /work** — considered and deferred; 4 projects don't need it
 - **CMS or headless backend** — content is hardcoded in the repo
-- **Analytics** — not required at launch; can add later
+- **Resume page (/resume)** — removed from v2; resume is PDF-only via download link
+- **Analytics** — Cloudflare Web Analytics enabled at deploy (free, built-in)
 - **Bay Honors Research case study** — content not ready; placeholder in grid is fine
 - **Internationalization** — English only
 - **Authentication or admin panel** — static site, no server
 
 ---
 
-## Open Questions
+## Resolved Decisions
 
-1. Will Kopycat have a live embed or screenshots only? (Live embed may be blocked behind auth)
-2. Is a photo used on the About page?
-3. PDF resume — is an existing file being used or does it need to be created?
-4. Deploy target: Vercel or Cloudflare Pages? (affects prerender strategy for SEO)
-5. Custom domain DNS cutover timing — is the old Next.js site staying live during build?
+1. **Kopycat embed** → Screenshots only for now (auth wall blocks live embed; revisit when public demo mode exists)
+2. **Photo on About** → No full photo; small avatar/icon next to name in nav only
+3. **Resume section** → Removed from v2 entirely; not needed
+4. **Deploy target** → **Cloudflare Pages** — domain already on Cloudflare, zero-config DNS, unlimited bandwidth, free analytics. Requires `public/_redirects`: `/* /index.html 200`
+5. **DNS cutover** → Old site not live at `portfolio.tylervovan.com`; Vercel preview available at `https://portfolio-tylervovan.vercel.app/` during build
 
 ---
 
