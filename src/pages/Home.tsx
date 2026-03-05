@@ -16,7 +16,14 @@ export function Home() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from('.hero-letter', {
+      // Reset to initial state (prevents double-animation on remount)
+      gsap.set('.hero-letter', { y: 80, opacity: 0 })
+      gsap.set(subtitleRef.current, { y: 30, opacity: 0 })
+      gsap.set('.hero-link', { y: 20, opacity: 0 })
+
+      gsap.to('.hero-letter', {
+        y: 0,
+        opacity: 1,
         y: 80,
         opacity: 0,
         duration: 1,
@@ -24,16 +31,16 @@ export function Home() {
         stagger: 0.04,
         delay: 0.1,
       })
-      gsap.from(subtitleRef.current, {
-        y: 30,
-        opacity: 0,
+      gsap.to(subtitleRef.current, {
+        y: 0,
+        opacity: 1,
         duration: 0.8,
         ease: 'power3.out',
         delay: 0.7,
       })
-      gsap.from('.hero-link', {
-        y: 20,
-        opacity: 0,
+      gsap.to('.hero-link', {
+        y: 0,
+        opacity: 1,
         duration: 0.6,
         ease: 'power3.out',
         stagger: 0.08,
