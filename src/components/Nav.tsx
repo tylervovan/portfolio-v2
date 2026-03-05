@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router'
 
 const NAV_LINKS = [
-  { to: '/work', label: 'Work' },
   { to: '/about', label: 'About' },
   { to: '/resume', label: 'Resume' },
 ]

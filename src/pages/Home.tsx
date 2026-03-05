@@ -105,16 +105,6 @@ export function Home() {
           </div>
           <div className="mt-12">
             <Link
-              to="/work"
-              className="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-[#737373] hover:text-[#0a0a0a] transition-colors duration-200"
-            >
-              View all work
-              <span aria-hidden>→</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="px-6 py-10 border-t border-black/8">
         <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-4">
