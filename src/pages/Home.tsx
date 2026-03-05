@@ -24,8 +24,6 @@ export function Home() {
       gsap.to('.hero-letter', {
         y: 0,
         opacity: 1,
-        y: 80,
-        opacity: 0,
         duration: 1,
         ease: 'power3.out',
         stagger: 0.04,
