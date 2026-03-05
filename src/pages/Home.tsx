@@ -57,7 +57,7 @@ export function Home() {
           ref={subtitleRef}
           className="mt-8 text-base md:text-lg text-[#737373] text-center max-w-md leading-relaxed"
         >
-          CS &amp; Data Science · Building things that matter
+          CS &amp; Data Science
         </p>
 
         <div className="mt-10 flex gap-8 flex-wrap justify-center">

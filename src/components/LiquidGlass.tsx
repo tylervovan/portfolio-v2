@@ -30,11 +30,11 @@ export function LiquidGlass() {
       {/* Gradient blobs with blur - subtle ambient glow */}
       <div
         className="absolute -left-32 -top-32 h-96 w-96 rounded-full opacity-20 blur-3xl"
-        style={{ background: 'radial-gradient(circle, #2E5CFF 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #10B981 0%, transparent 70%)' }}
       />
       <div
         className="absolute -right-32 top-1/4 h-[500px] w-[500px] rounded-full opacity-15 blur-3xl"
-        style={{ background: 'radial-gradient(circle, #8B5CF6 0%, transparent 70%)' }}
+        style={{ background: 'radial-gradient(circle, #3B82F6 0%, transparent 70%)' }}
       />
       <div
         className="absolute -bottom-32 left-1/3 h-[400px] w-[400px] rounded-full opacity-20 blur-3xl"
