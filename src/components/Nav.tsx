@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router'
 
 const NAV_LINKS = [
   { to: '/about', label: 'About' },
-  { to: '/resume', label: 'Resume' },
 ]
 
 export function Nav() {
@@ -24,10 +23,10 @@ export function Nav() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-colors duration-300 ${
         scrolled
-          ? 'bg-[#fafaf8]/80 backdrop-blur-md border-b border-black/8'
-          : ''
+          ? 'bg-[#fafaf8]/80 backdrop-blur-md border-black/8'
+          : 'border-transparent'
       }`}
     >
       <nav className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-5">

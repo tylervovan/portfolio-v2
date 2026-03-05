@@ -18,6 +18,7 @@
 html {
   /* Lenis handles smooth scrolling */
   scroll-behavior: auto;
+  scrollbar-gutter: stable;
 }
 
 body {
