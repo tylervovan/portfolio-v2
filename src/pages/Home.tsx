@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router'
 import gsap from 'gsap'
 import { projects } from '../lib/projects'
 import { ProjectCard } from '../components/ProjectCard'
@@ -103,8 +102,9 @@ export function Home() {
               <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
-          <div className="mt-12">
-            <Link
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="px-6 py-10 border-t border-black/8">
         <div className="mx-auto max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-4">
