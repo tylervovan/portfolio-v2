@@ -74,7 +74,7 @@ export function Home() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/tyler-vovan-30330b2a8"
+            href="https://www.linkedin.com/in/tyler-vovan/"
             target="_blank"
             rel="noopener noreferrer"
             className="hero-link text-xs uppercase tracking-widest text-[#737373] hover:text-[#0a0a0a] transition-colors duration-200"
@@ -126,7 +126,7 @@ export function Home() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/in/tyler-vovan-30330b2a8"
+              href="https://www.linkedin.com/in/tyler-vovan/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs text-[#737373]/60 hover:text-[#737373] transition-colors"

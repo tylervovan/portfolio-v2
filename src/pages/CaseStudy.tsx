@@ -39,7 +39,7 @@ export function CaseStudy() {
             {project.name}
           </h1>
           <p className="mt-4 text-[#a3a3a3] max-w-xl leading-relaxed">{project.description}</p>
-          <div className="mt-6 flex flex-wrap gap-2">
+          <div className="mt-6 flex flex-wrap items-center gap-2">
             {project.tags.map((tag) => (
               <span
                 key={tag}
@@ -49,12 +49,49 @@ export function CaseStudy() {
               </span>
             ))}
           </div>
+          {project.url && (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-2 text-sm text-[#171717] hover:text-black transition-colors font-medium"
+            >
+              Visit site ↗
+            </a>
+          )}
         </div>
 
-        {/* Placeholder */}
-        <div className="py-[120px] text-center border-t border-white/5">
-          <p className="text-[#a3a3a3]/40 text-sm">Website in progress</p>
-        </div>
+        {/* Content */}
+        {project.images && project.images.length > 0 ? (
+          <div className="pb-16 border-t border-white/5 pt-12">
+            <div className="grid gap-6">
+              {project.images.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`${project.name} screenshot ${i + 1}`}
+                  className="w-full rounded-xl border border-black/5"
+                />
+              ))}
+            </div>
+          </div>
+        ) : project.video ? (
+          <div className="pb-16 border-t border-white/5 pt-12">
+            <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src={project.video.replace('watch?v=', 'embed/')}
+                title={project.name}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="py-[120px] text-center border-t border-white/5">
+            <p className="text-[#a3a3a3]/40 text-sm">Website in progress</p>
+          </div>
+        )}
       </div>
     </div>
   )

@@ -5,6 +5,7 @@ const CARD_GRADIENTS: Record<string, string> = {
   kopycat: 'from-[#2E5CFF]/20 to-[#06B6D4]/10',
   'peptide-place': 'from-[#8B5CF6]/20 to-[#2E5CFF]/10',
   genki: 'from-[#06B6D4]/20 to-[#8B5CF6]/10',
+  'sc-robotics': 'from-[#EF4444]/20 to-[#F97316]/10',
   'bay-honors': 'from-[#a3a3a3]/10 to-transparent',
 }
 
@@ -20,7 +21,14 @@ export function ProjectCard({ project }: { project: Project }) {
       aria-disabled={project.comingSoon}
     >
       {/* Thumbnail */}
-      <div className={`h-52 relative overflow-hidden bg-gradient-to-br ${gradient}`}>
+      <div className={`h-52 relative overflow-hidden ${project.thumbnail ? '' : `bg-gradient-to-br ${gradient}`}`}>
+        {project.thumbnail && (
+          <img
+            src={project.thumbnail}
+            alt={project.name}
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+        )}
         {project.comingSoon && (
           <div className="absolute inset-0 flex items-center justify-center">
             <span className="text-xs uppercase tracking-widest text-[#737373]/80 border border-black/10 rounded-full px-4 py-1.5">
@@ -29,14 +37,16 @@ export function ProjectCard({ project }: { project: Project }) {
           </div>
         )}
         {/* Subtle grid texture */}
-        <div
-          className="absolute inset-0 opacity-[0.06]"
-          style={{
-            backgroundImage:
-              'linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)',
-            backgroundSize: '24px 24px',
-          }}
-        />
+        {!project.thumbnail && (
+          <div
+            className="absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                'linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px)',
+              backgroundSize: '24px 24px',
+            }}
+          />
+        )}
       </div>
 
       {/* Content */}

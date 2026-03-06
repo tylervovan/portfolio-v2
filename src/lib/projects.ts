@@ -7,9 +7,21 @@ export interface Project {
   comingSoon?: boolean
   featured?: boolean
   url?: string
+  video?: string
+  images?: string[]
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'sc-robotics',
+    name: 'SC Robotics - University Rover Challenge',
+    description:
+      'Built the Foxglove mission control GUI for real-time rover monitoring and operation at the 2026 University Rover Challenge. Edited the System Acceptance Review video under extreme time pressure.',
+    tags: ['Foxglove', 'ROS 2', 'Python', 'Robotics'],
+    featured: true,
+    thumbnail: '/sc-robotics-thumb.png',
+    video: 'https://www.youtube.com/watch?v=36oEEap9BaM',
+  },
   {
     slug: 'kopycat',
     name: 'Kopycat',
@@ -33,6 +45,9 @@ export const projects: Project[] = [
       'Digital companion for the Genki Japanese textbook series with interactive grammar tables and vocabulary drills.',
     tags: ['React', 'TypeScript'],
     featured: true,
+    thumbnail: '/genki-thumb-1.png',
+    url: 'https://genki-reference.vercel.app/',
+    images: ['/genki-thumb-1.png', '/genki-thumb-2.png'],
   },
   {
     slug: 'bay-honors',
