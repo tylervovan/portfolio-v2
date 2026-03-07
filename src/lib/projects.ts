@@ -37,6 +37,20 @@ export const projects: Project[] = [
       'Full-stack e-commerce platform for research peptides with admin dashboard, product management, and lab report uploads.',
     tags: ['Next.js', 'Supabase', 'Vercel', 'TypeScript'],
     featured: true,
+    url: 'https://peptideplace.net/',
+    thumbnail: '/peptide-place-thumb-1.png',
+    images: ['/peptide-place-thumb-1.png', '/peptide-place-thumb-2.png'],
+  },
+  {
+    slug: 'linkedin-tracker',
+    name: 'LinkedIn Tracker',
+    description:
+      'Personal CRM for job seekers — track LinkedIn connections, manage outreach status, and monitor job listings with AI-predicted matches.',
+    tags: ['Next.js', 'Supabase', 'Cloudflare', 'TypeScript'],
+    featured: true,
+    url: 'https://linkedin-tracker.tylervovan.com',
+    thumbnail: '/linkedin-tracker-thumb-1.png',
+    images: ['/linkedin-tracker-thumb-1.png', '/linkedin-tracker-thumb-2.png'],
   },
   {
     slug: 'genki',
