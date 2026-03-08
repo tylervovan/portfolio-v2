@@ -46,6 +46,15 @@ export const projects: Project[] = [
     images: ['/linkedin-tracker-thumb-1.png'],
   },
   {
+    slug: 'photography',
+    name: 'Photography',
+    description:
+      'Personal photography portfolio — street, portrait, and landscape work.',
+    tags: ['Photography'],
+    featured: true,
+    url: 'https://photography.tylervovan.com/',
+  },
+  {
     slug: 'genki',
     name: 'Genki Reference',
     description:
