@@ -53,6 +53,8 @@ export const projects: Project[] = [
     tags: ['Photography'],
     featured: true,
     url: 'https://photography.tylervovan.com/',
+    thumbnail: '/photography-thumb-1.png',
+    images: ['/photography-thumb-1.png', '/photography-thumb-2.png'],
   },
   {
     slug: 'genki',
