@@ -66,12 +66,28 @@ export function CaseStudy() {
           <div className="pb-16 border-t border-white/5 pt-12">
             <div className="grid gap-6">
               {project.images.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt={`${project.name} screenshot ${i + 1}`}
-                  className="w-full rounded-xl border border-black/5"
-                />
+                project.url ? (
+                  <a
+                    key={i}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.name} screenshot ${i + 1}`}
+                      className="w-full rounded-xl border border-black/5 cursor-pointer transition-opacity hover:opacity-90"
+                    />
+                  </a>
+                ) : (
+                  <img
+                    key={i}
+                    src={src}
+                    alt={`${project.name} screenshot ${i + 1}`}
+                    className="w-full rounded-xl border border-black/5"
+                  />
+                )
               ))}
             </div>
           </div>
