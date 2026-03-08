@@ -36,6 +36,13 @@ export function ProjectCard({ project }: { project: Project }) {
             </span>
           </div>
         )}
+        {project.wip && (
+          <div className="absolute top-3 right-3">
+            <span className="text-[10px] uppercase tracking-widest font-semibold text-amber-700 bg-amber-100 border border-amber-200 rounded-full px-2.5 py-1">
+              WIP
+            </span>
+          </div>
+        )}
         {/* Subtle grid texture */}
         {!project.thumbnail && (
           <div

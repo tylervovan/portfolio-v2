@@ -5,6 +5,7 @@ export interface Project {
   tags: string[]
   thumbnail?: string
   comingSoon?: boolean
+  wip?: boolean
   featured?: boolean
   url?: string
   video?: string
@@ -29,6 +30,7 @@ export const projects: Project[] = [
       'Real-time crypto copy trading platform with whale tracking and Polymarket CLOB API integration. Built on a Turborepo monorepo with Bun + Hono.',
     tags: ['TypeScript', 'Bun', 'Hono', 'Next.js', 'WebSocket'],
     featured: true,
+    wip: true,
   },
   {
     slug: 'peptide-place',
