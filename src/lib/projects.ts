@@ -43,7 +43,7 @@ export const projects: Project[] = [
     featured: true,
     url: 'https://linkedin-tracker.tylervovan.com',
     thumbnail: '/linkedin-tracker-thumb-1.png',
-    images: ['/linkedin-tracker-thumb-1.png', '/linkedin-tracker-thumb-2.png'],
+    images: ['/linkedin-tracker-thumb-1.png'],
   },
   {
     slug: 'genki',
