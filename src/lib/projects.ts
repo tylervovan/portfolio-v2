@@ -24,15 +24,6 @@ export const projects: Project[] = [
     video: 'https://www.youtube.com/watch?v=36oEEap9BaM',
   },
   {
-    slug: 'kopycat',
-    name: 'Kopycat',
-    description:
-      'Real-time crypto copy trading platform with whale tracking and Polymarket CLOB API integration. Built on a Turborepo monorepo with Bun + Hono.',
-    tags: ['TypeScript', 'Bun', 'Hono', 'Next.js', 'WebSocket'],
-    featured: true,
-    wip: true,
-  },
-  {
     slug: 'peptide-place',
     name: 'Peptide Place',
     description:
@@ -64,6 +55,15 @@ export const projects: Project[] = [
     thumbnail: '/genki-thumb-1.png',
     url: 'https://genki-reference.vercel.app/',
     images: ['/genki-thumb-1.png', '/genki-thumb-2.png'],
+  },
+  {
+    slug: 'kopycat',
+    name: 'Kopycat',
+    description:
+      'Real-time crypto copy trading platform with whale tracking and Polymarket CLOB API integration. Built on a Turborepo monorepo with Bun + Hono.',
+    tags: ['TypeScript', 'Bun', 'Hono', 'Next.js', 'WebSocket'],
+    featured: true,
+    wip: true,
   },
   {
     slug: 'bay-honors',
