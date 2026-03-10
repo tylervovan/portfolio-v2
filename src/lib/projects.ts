@@ -38,18 +38,18 @@ export const projects: Project[] = [
     slug: 'linkedin-tracker',
     name: 'LinkedIn Tracker',
     description:
-      'Personal CRM for job seekers — track LinkedIn connections, manage outreach status, and monitor job listings with AI-predicted matches.',
+      'Personal CRM for job seekers — track LinkedIn connections, manage outreach status, and let AI surface the right people at the right time. Integrates with OpenClaw via MCP.',
     tags: ['Next.js', 'Supabase', 'Cloudflare', 'TypeScript'],
     featured: true,
     url: 'https://linkedin-tracker.tylervovan.com',
     thumbnail: '/linkedin-tracker-thumb-1.png',
-    images: ['/linkedin-tracker-thumb-1.png'],
+    images: ['/linkedin-tracker-thumb-1.png', '/linkedin-tracker-thumb-2.png'],
   },
   {
     slug: 'photography',
     name: 'Photography',
     description:
-      'Personal photography portfolio — street, portrait, and landscape work.',
+      'Personal photography portfolio.',
     tags: ['Photography'],
     featured: true,
     url: 'https://photography.tylervovan.com/',
