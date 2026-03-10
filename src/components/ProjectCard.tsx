@@ -64,9 +64,9 @@ export function ProjectCard({ project }: { project: Project }) {
             {project.name}
           </h3>
           {!project.comingSoon && (
-            <span className="text-[#737373] flex-shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">
-              ↗
-            </span>
+            <svg className="text-[#737373] flex-shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           )}
         </div>
         <p className="mt-2 text-sm text-[#737373] leading-relaxed">

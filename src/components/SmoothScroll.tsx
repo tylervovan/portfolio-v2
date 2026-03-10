@@ -7,7 +7,7 @@ export function SmoothScroll({ children }: { children: React.ReactNode }) {
   const location = useLocation()
 
   useEffect(() => {
-    const lenis = new Lenis({ duration: 1.2 })
+    const lenis = new Lenis({ duration: 0.8 })
     lenisRef.current = lenis
 
     let raf: number
