@@ -1,9 +1,15 @@
 import { useParams, Link } from 'react-router'
 import { projects } from '../lib/projects'
+import { useSEO } from '../lib/useSEO'
 
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>()
   const project = projects.find((p) => p.slug === slug)
+
+  useSEO({
+    title: project?.name,
+    description: project?.description,
+  })
 
   if (!project) {
     return (
@@ -17,7 +23,7 @@ export function CaseStudy() {
             to="/"
             className="text-xs text-[#a3a3a3] hover:text-[#171717] transition-colors uppercase tracking-widest"
           >
-            ← Back to work
+            <svg className="inline-block mr-1" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6H2M2 6L5 3M2 6L5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Back to work
           </Link>
         </div>
       </div>
@@ -33,7 +39,7 @@ export function CaseStudy() {
             to="/"
             className="text-xs text-[#a3a3a3] uppercase tracking-widest hover:text-[#171717] transition-colors"
           >
-            ← Home
+            <svg className="inline-block mr-1" width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6H2M2 6L5 3M2 6L5 9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>Home
           </Link>
           <h1 className="mt-8 font-heading font-bold text-5xl md:text-6xl text-[#171717] tracking-tight">
             {project.name}
@@ -56,7 +62,8 @@ export function CaseStudy() {
               rel="noopener noreferrer"
               className="mt-6 inline-flex items-center gap-2 text-sm text-[#171717] hover:text-black transition-colors font-medium"
             >
-              Visit site ↗
+              Visit site
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 11.5L11.5 2.5M11.5 2.5H5.5M11.5 2.5V8.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
           )}
         </div>
