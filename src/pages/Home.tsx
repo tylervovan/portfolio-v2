@@ -4,7 +4,6 @@ import { ProjectCard } from '../components/ProjectCard'
 const HERO_LINKS = [
   { href: 'https://github.com/tylervovan', label: 'GitHub', external: true },
   { href: 'https://www.linkedin.com/in/tyler-vovan/', label: 'LinkedIn', external: true },
-  { href: 'mailto:hello@tylervovan.com', label: 'Email', external: false },
 ]
 
 export function Home() {
@@ -31,6 +30,9 @@ export function Home() {
               {label}
             </a>
           ))}
+          <span className="text-xs uppercase tracking-widest text-[#737373]">
+            tyler.n.vovan@gmail.com
+          </span>
         </div>
 
         {/* Scroll indicator */}
