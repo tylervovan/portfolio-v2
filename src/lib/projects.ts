@@ -23,17 +23,17 @@ export const projects: Project[] = [
     thumbnail: '/sc-robotics-thumb.png',
     video: 'https://www.youtube.com/watch?v=36oEEap9BaM',
   },
-  {
-    slug: 'peptide-place',
-    name: 'Peptide Place',
-    description:
-      'Full-stack e-commerce platform for research peptides with admin dashboard, product management, and lab report uploads.',
-    tags: ['Next.js', 'Supabase', 'Vercel', 'TypeScript'],
-    featured: true,
-    url: 'https://peptideplace.net/',
-    thumbnail: '/peptide-place-thumb-1.png',
-    images: ['/peptide-place-thumb-1.png', '/peptide-place-thumb-2.png'],
-  },
+  // {
+  //   slug: 'peptide-place',
+  //   name: 'Peptide Place',
+  //   description:
+  //     'Full-stack e-commerce platform for research peptides with admin dashboard, product management, and lab report uploads.',
+  //   tags: ['Next.js', 'Supabase', 'Vercel', 'TypeScript'],
+  //   featured: true,
+  //   url: 'https://peptideplace.net/',
+  //   thumbnail: '/peptide-place-thumb-1.png',
+  //   images: ['/peptide-place-thumb-1.png', '/peptide-place-thumb-2.png'],
+  // },
   {
     slug: 'linkedin-tracker',
     name: 'LinkedIn Tracker',
