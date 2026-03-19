@@ -11,7 +11,7 @@ export function Home() {
     <div>
       {/* Hero */}
       <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-20">
-        <h1 className="font-heading font-bold text-[clamp(3.5rem,10vw,9rem)] tracking-tight text-center leading-[0.9] select-none">
+        <h1 className="font-heading font-bold text-[clamp(3.5rem,10vw,9rem)] tracking-tight text-center leading-[0.9] select-none text-[#737373]">
           Tyler Vovan
         </h1>
 

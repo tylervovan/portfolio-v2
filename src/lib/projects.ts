@@ -67,22 +67,4 @@ export const projects: Project[] = [
     url: 'https://genki-reference.vercel.app/',
     images: ['/genki-thumb-1.png', '/genki-thumb-2.png'],
   },
-  {
-    slug: 'kopycat',
-    name: 'Kopycat',
-    description:
-      'Real-time crypto copy trading platform with whale tracking and Polymarket CLOB API integration. Built on a Turborepo monorepo with Bun + Hono.',
-    tags: ['TypeScript', 'Bun', 'Hono', 'Next.js', 'WebSocket'],
-    featured: true,
-    wip: true,
-  },
-  {
-    slug: 'bay-honors',
-    name: 'Bay Honors Research',
-    description:
-      'Academic research project — data analysis and visualization for bay conservation studies.',
-    tags: ['Python', 'Data Science'],
-    featured: false,
-    comingSoon: true,
-  },
 ]
