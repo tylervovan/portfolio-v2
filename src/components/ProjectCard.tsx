@@ -6,6 +6,7 @@ const CARD_GRADIENTS: Record<string, string> = {
   'peptide-place': 'from-[#8B5CF6]/20 to-[#2E5CFF]/10',
   genki: 'from-[#06B6D4]/20 to-[#8B5CF6]/10',
   'sc-robotics': 'from-[#EF4444]/20 to-[#F97316]/10',
+  'proxmox-homelab': 'from-[#E57000]/20 to-[#F59E0B]/10',
   photography: 'from-[#F97316]/20 to-[#EF4444]/10',
   'bay-honors': 'from-[#a3a3a3]/10 to-transparent',
 }

@@ -35,6 +35,16 @@ export const projects: Project[] = [
   //   images: ['/peptide-place-thumb-1.png', '/peptide-place-thumb-2.png'],
   // },
   {
+    slug: 'proxmox-homelab',
+    name: 'Proxmox Homelab — OpenClaw',
+    description:
+      'Self-hosted Proxmox VE homelab running OpenClaw for AI-assisted development, with Cloudflare Tunnel for secure remote monitoring and access from anywhere.',
+    tags: ['Proxmox', 'Cloudflare', 'Linux', 'OpenClaw'],
+    featured: true,
+    thumbnail: '/proxmox-openclaw-setup.png',
+    images: ['/proxmox-openclaw-setup.png'],
+  },
+  {
     slug: 'linkedin-tracker',
     name: 'LinkedIn Tracker',
     description:
