@@ -20,6 +20,7 @@ export const projects: Project[] = [
       'Built the Foxglove mission control GUI for real-time rover monitoring and operation at the 2026 University Rover Challenge. Edited the System Acceptance Review video under extreme time pressure.',
     tags: ['Foxglove', 'ROS 2', 'Python', 'Robotics'],
     featured: true,
+    url: 'https://saddlebackcollegerobotics.com',
     thumbnail: '/sc-robotics-thumb.png',
     video: 'https://www.youtube.com/watch?v=36oEEap9BaM',
   },

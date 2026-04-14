@@ -16,7 +16,7 @@ export function Home() {
         </h1>
 
         <p className="mt-8 text-base md:text-lg text-[#737373] text-center max-w-md leading-relaxed">
-          CS &amp; Data Science
+          Computer Engineering <span className="inline-block align-middle translate-y-[-1px]">|</span> Robotics
         </p>
 
         <div className="mt-10 flex gap-8 flex-wrap justify-center">
