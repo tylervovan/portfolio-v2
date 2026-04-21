@@ -4,6 +4,7 @@ export interface Project {
   description: string
   tags: string[]
   thumbnail?: string
+  thumbnailPosition?: string
   comingSoon?: boolean
   wip?: boolean
   featured?: boolean
@@ -13,6 +14,18 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: 'forkbot',
+    name: 'Forkbot — Citrus Hack 2026',
+    description:
+      'Hackathon robot that autonomously navigates to a wall outlet, uses on-device YOLO + Intel RealSense depth to lock onto the plug, and raises a lead-screw arm to the exact height — streamed live to a remote operator over Tailscale + Foxglove. Pivoted the entire perception stack to an RTX 4060 laptop after a Jetson Orin Nano bricked 18 hours before demo.',
+    tags: ['ROS 2', 'Python', 'YOLO', 'Foxglove', 'Arduino', 'Robotics'],
+    featured: true,
+    url: 'https://devpost.com/software/forkbot',
+    thumbnail: '/forkbot-thumb-1.jpg',
+    thumbnailPosition: 'center 70%',
+    images: ['/forkbot-thumb-1.jpg', '/forkbot-thumb-2.jpg'],
+  },
   {
     slug: 'sc-robotics',
     name: 'SC Robotics - University Rover Challenge',
