@@ -88,7 +88,7 @@ export const projects: Project[] = [
     tags: ['React', 'TypeScript'],
     featured: true,
     thumbnail: '/genki-thumb-1.png',
-    url: 'https://genki-reference.vercel.app/',
+    url: 'https://genki-reference.tylervovan.com/',
     images: ['/genki-thumb-1.png', '/genki-thumb-2.png'],
   },
 ]
