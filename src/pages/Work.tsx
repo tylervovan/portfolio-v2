@@ -1,7 +1,15 @@
 import { projects } from '../lib/projects'
 import { ProjectCard } from '../components/ProjectCard'
+import { useSEO } from '../lib/useSEO'
 
 export function Work() {
+  useSEO({
+    title: 'Work',
+    description:
+      'Selected projects by Tyler Vovan, spanning robotics mission control and rover software, web apps, and self-hosted infrastructure.',
+    path: '/work',
+  })
+
   return (
     <div className="min-h-screen px-6">
       <div className="mx-auto max-w-[1200px]">
@@ -9,7 +17,7 @@ export function Work() {
           <h1 className="font-heading font-bold text-5xl md:text-6xl text-[#171717] tracking-tight">
             Work
           </h1>
-          <p className="mt-4 text-[#525252]">Selected projects — {projects.length} total</p>
+          <p className="mt-4 text-[#525252]">Selected projects - {projects.length} total</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 pb-[120px]">

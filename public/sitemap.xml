@@ -2,42 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://tylervovan.com/</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>1.0</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://tylervovan.com/work</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.8</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://tylervovan.com/work/sc-robotics</loc>
+    <loc>https://tylervovan.com/work/forkbot</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
-    <loc>https://tylervovan.com/work/peptide-place</loc>
+    <loc>https://tylervovan.com/work/sc-robotics</loc>
+    <lastmod>2026-05-28</lastmod>
+    <priority>0.7</priority>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://tylervovan.com/work/proxmox-homelab</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://tylervovan.com/work/linkedin-tracker</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://tylervovan.com/work/photography</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.6</priority>
     <changefreq>monthly</changefreq>
   </url>
   <url>
     <loc>https://tylervovan.com/work/genki</loc>
+    <lastmod>2026-05-28</lastmod>
     <priority>0.6</priority>
-    <changefreq>monthly</changefreq>
-  </url>
-  <url>
-    <loc>https://tylervovan.com/work/kopycat</loc>
-    <priority>0.5</priority>
     <changefreq>monthly</changefreq>
   </url>
 </urlset>

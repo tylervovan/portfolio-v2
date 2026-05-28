@@ -1,5 +1,6 @@
 import { projects } from '../lib/projects'
 import { ProjectCard } from '../components/ProjectCard'
+import { useSEO } from '../lib/useSEO'
 
 const HERO_LINKS = [
   { href: 'https://github.com/tylervovan', label: 'GitHub', external: true },
@@ -7,6 +8,8 @@ const HERO_LINKS = [
 ]
 
 export function Home() {
+  useSEO({ path: '/' })
+
   return (
     <div>
       {/* Hero */}
@@ -42,8 +45,26 @@ export function Home() {
         </div>
       </section>
 
+      {/* About */}
+      <section className="px-6 pt-[120px]">
+        <div className="mx-auto max-w-[760px]">
+          <h2 className="font-body text-xs uppercase tracking-[0.2em] text-[#737373] mb-8">
+            About
+          </h2>
+          <p className="text-lg md:text-xl text-[#525252] leading-relaxed">
+            I'm Tyler Vovan. I recently became Team Lead of my Mars Rover robotics
+            team, SC Robotics, competing in the University Rover Challenge. I'm a
+            second-year Computer Engineering student at Saddleback College, with
+            plans to transfer to a four-year university. In five years, I see
+            myself doing embedded software and simulation in robotics or another
+            engineering-related field. Right now, I'm looking for
+            robotics-software, embedded, and PM internships.
+          </p>
+        </div>
+      </section>
+
       {/* Featured projects */}
-      <section className="px-6 py-[120px]">
+      <section className="px-6 pt-[120px] pb-[120px]">
         <div className="mx-auto max-w-[1200px]">
           <h2 className="font-body text-xs uppercase tracking-[0.2em] text-[#737373] mb-12">
             Selected Work

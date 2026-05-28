@@ -29,6 +29,8 @@ export function ProjectCard({ project }: { project: Project }) {
           <img
             src={project.thumbnail}
             alt={project.name}
+            loading="lazy"
+            decoding="async"
             className="absolute inset-0 w-full h-full object-cover"
             style={project.thumbnailPosition ? { objectPosition: project.thumbnailPosition } : undefined}
           />

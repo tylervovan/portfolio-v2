@@ -7,8 +7,11 @@ export function CaseStudy() {
   const project = projects.find((p) => p.slug === slug)
 
   useSEO({
-    title: project?.name,
+    title: project?.name ?? 'Project not found',
     description: project?.description,
+    path: project ? `/work/${project.slug}` : undefined,
+    image: project?.thumbnail,
+    noindex: !project,
   })
 
   if (!project) {
@@ -84,6 +87,8 @@ export function CaseStudy() {
                     <img
                       src={src}
                       alt={`${project.name} screenshot ${i + 1}`}
+                      loading="lazy"
+                      decoding="async"
                       className="w-full rounded-xl border border-black/5 cursor-pointer transition-opacity hover:opacity-90"
                     />
                   </a>
@@ -92,6 +97,8 @@ export function CaseStudy() {
                     key={i}
                     src={src}
                     alt={`${project.name} screenshot ${i + 1}`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full rounded-xl border border-black/5"
                   />
                 )

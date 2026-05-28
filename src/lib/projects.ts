@@ -16,9 +16,9 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: 'forkbot',
-    name: 'Forkbot — Citrus Hack 2026',
+    name: 'Forkbot - Citrus Hack 2026',
     description:
-      'Hackathon robot that autonomously navigates to a wall outlet, uses on-device YOLO + Intel RealSense depth to lock onto the plug, and raises a lead-screw arm to the exact height — streamed live to a remote operator over Tailscale + Foxglove. Pivoted the entire perception stack to an RTX 4060 laptop after a Jetson Orin Nano bricked 18 hours before demo.',
+      'Hackathon robot that autonomously navigates to a wall outlet, uses on-device YOLO + Intel RealSense depth to lock onto the plug, and raises a lead-screw arm to the exact height, streamed live to a remote operator over Tailscale + Foxglove. Pivoted the entire perception stack to an RTX 4060 laptop after a Jetson Orin Nano bricked 18 hours before demo.',
     tags: ['ROS 2', 'Python', 'YOLO', 'Foxglove', 'Arduino', 'Robotics'],
     featured: true,
     url: 'https://devpost.com/software/forkbot',
@@ -50,7 +50,7 @@ export const projects: Project[] = [
   // },
   {
     slug: 'proxmox-homelab',
-    name: 'Proxmox Homelab — OpenClaw',
+    name: 'Proxmox Homelab - OpenClaw',
     description:
       'Self-hosted Proxmox VE homelab running OpenClaw for AI-assisted development, with Cloudflare Tunnel for secure remote monitoring and access from anywhere.',
     tags: ['Proxmox', 'Cloudflare', 'Linux', 'OpenClaw'],
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     slug: 'linkedin-tracker',
     name: 'LinkedIn Tracker',
     description:
-      'Personal CRM for job seekers — track LinkedIn connections, manage outreach status, and let AI surface the right people at the right time. Integrates with OpenClaw via MCP.',
+      'Personal CRM for job seekers: track LinkedIn connections, manage outreach status, and let AI surface the right people at the right time. Integrates with OpenClaw via MCP.',
     tags: ['Next.js', 'Supabase', 'Cloudflare', 'TypeScript'],
     featured: true,
     url: 'https://linkedin-tracker.tylervovan.com',
