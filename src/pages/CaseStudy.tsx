@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router'
 import { projects } from '../lib/projects'
-import { useSEO } from '../lib/useSEO'
+import { buildProjectGraph, SITE_URL, useSEO } from '../lib/useSEO'
 
 export function CaseStudy() {
   const { slug } = useParams<{ slug: string }>()
@@ -8,10 +8,11 @@ export function CaseStudy() {
 
   useSEO({
     title: project?.name ?? 'Project not found',
-    description: project?.description,
+    description: project?.seoDescription ?? project?.description,
     path: project ? `/work/${project.slug}` : undefined,
     image: project?.thumbnail,
     noindex: !project,
+    graph: project ? buildProjectGraph(project, `${SITE_URL}/work/${project.slug}`) : undefined,
   })
 
   if (!project) {
@@ -48,7 +49,8 @@ export function CaseStudy() {
             {project.name}
           </h1>
           <p className="mt-4 text-[#a3a3a3] max-w-xl leading-relaxed">{project.description}</p>
-          <div className="mt-6 flex flex-wrap items-center gap-2">
+          <h2 className="mt-8 text-xs uppercase tracking-widest text-[#a3a3a3]">Built with</h2>
+          <div className="mt-3 flex flex-wrap items-center gap-2">
             {project.tags.map((tag) => (
               <span
                 key={tag}
@@ -72,56 +74,83 @@ export function CaseStudy() {
         </div>
 
         {/* Content */}
-        {project.images && project.images.length > 0 ? (
-          <div className="pb-16 border-t border-white/5 pt-12">
-            <div className="grid gap-6">
-              {project.images.map((src, i) => (
-                project.url ? (
-                  <a
-                    key={i}
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block"
+        {(() => {
+          // Fall back to the thumbnail so video-only projects (e.g. SC Robotics)
+          // still surface a crawlable still image alongside the embed.
+          const gallery =
+            project.images && project.images.length > 0
+              ? project.images
+              : project.thumbnail
+                ? [project.thumbnail]
+                : []
+
+          if (gallery.length === 0 && !project.video) {
+            return (
+              <div className="py-[120px] text-center border-t border-white/5">
+                <p className="text-[#a3a3a3]/40 text-sm">Website in progress</p>
+              </div>
+            )
+          }
+
+          return (
+            <div className="pb-16 border-t border-white/5 pt-12">
+              {gallery.length > 0 && (
+                <>
+                  <h2 className="text-xs uppercase tracking-widest text-[#a3a3a3] mb-6">Gallery</h2>
+                  <div className="grid gap-6">
+                    {gallery.map((src, i) =>
+                      project.url ? (
+                        <a
+                          key={i}
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="block"
+                        >
+                          <img
+                            src={src}
+                            alt={`${project.name} screenshot ${i + 1}`}
+                            loading="lazy"
+                            decoding="async"
+                            className="w-full rounded-xl border border-black/5 cursor-pointer transition-opacity hover:opacity-90"
+                          />
+                        </a>
+                      ) : (
+                        <img
+                          key={i}
+                          src={src}
+                          alt={`${project.name} screenshot ${i + 1}`}
+                          loading="lazy"
+                          decoding="async"
+                          className="w-full rounded-xl border border-black/5"
+                        />
+                      ),
+                    )}
+                  </div>
+                </>
+              )}
+
+              {project.video && (
+                <>
+                  <h2
+                    className={`text-xs uppercase tracking-widest text-[#a3a3a3] mb-6 ${gallery.length > 0 ? 'mt-12' : ''}`}
                   >
-                    <img
-                      src={src}
-                      alt={`${project.name} screenshot ${i + 1}`}
-                      loading="lazy"
-                      decoding="async"
-                      className="w-full rounded-xl border border-black/5 cursor-pointer transition-opacity hover:opacity-90"
+                    Demo
+                  </h2>
+                  <div className="relative w-full aspect-video rounded-xl overflow-hidden">
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src={project.video.replace('watch?v=', 'embed/')}
+                      title={project.name}
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                     />
-                  </a>
-                ) : (
-                  <img
-                    key={i}
-                    src={src}
-                    alt={`${project.name} screenshot ${i + 1}`}
-                    loading="lazy"
-                    decoding="async"
-                    className="w-full rounded-xl border border-black/5"
-                  />
-                )
-              ))}
+                  </div>
+                </>
+              )}
             </div>
-          </div>
-        ) : project.video ? (
-          <div className="pb-16 border-t border-white/5 pt-12">
-            <div className="relative w-full aspect-video rounded-xl overflow-hidden">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src={project.video.replace('watch?v=', 'embed/')}
-                title={project.name}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-            </div>
-          </div>
-        ) : (
-          <div className="py-[120px] text-center border-t border-white/5">
-            <p className="text-[#a3a3a3]/40 text-sm">Website in progress</p>
-          </div>
-        )}
+          )
+        })()}
       </div>
     </div>
   )

@@ -2,7 +2,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { StaticRouter } from 'react-router'
 import App from './App'
 import { projects } from './lib/projects'
-import { resolveMeta, type ResolvedMeta } from './lib/useSEO'
+import { buildProjectGraph, resolveMeta, SITE_URL, type ResolvedMeta } from './lib/useSEO'
 
 const WORK_DESCRIPTION =
   'Selected projects by Tyler Vovan, spanning robotics mission control and rover software, web apps, and self-hosted infrastructure.'
@@ -35,16 +35,20 @@ export function getPages(): PrerenderPage[] {
     },
   ]
 
-  const projectPages: PrerenderPage[] = projects.map((p) => ({
-    path: `/work/${p.slug}`,
-    file: `work/${p.slug}/index.html`,
-    meta: resolveMeta({
-      title: p.name,
-      description: p.description,
+  const projectPages: PrerenderPage[] = projects.map((p) => {
+    const canonical = `${SITE_URL}/work/${p.slug}`
+    return {
       path: `/work/${p.slug}`,
-      image: p.thumbnail,
-    }),
-  }))
+      file: `work/${p.slug}/index.html`,
+      meta: resolveMeta({
+        title: p.name,
+        description: p.seoDescription ?? p.description,
+        path: `/work/${p.slug}`,
+        image: p.thumbnail,
+        graph: buildProjectGraph(p, canonical),
+      }),
+    }
+  })
 
   return [...staticPages, ...projectPages]
 }

@@ -1,7 +1,10 @@
 export interface Project {
   slug: string
   name: string
+  /** Long-form body copy shown on the case-study page. */
   description: string
+  /** SERP-safe meta description (<=160 chars). Falls back to `description`. */
+  seoDescription?: string
   tags: string[]
   thumbnail?: string
   thumbnailPosition?: string
@@ -19,6 +22,8 @@ export const projects: Project[] = [
     name: 'Forkbot - Citrus Hack 2026',
     description:
       'Hackathon robot that autonomously navigates to a wall outlet, uses on-device YOLO + Intel RealSense depth to lock onto the plug, and raises a lead-screw arm to the exact height, streamed live to a remote operator over Tailscale + Foxglove. Pivoted the entire perception stack to an RTX 4060 laptop after a Jetson Orin Nano bricked 18 hours before demo.',
+    seoDescription:
+      'Autonomous hackathon robot using on-device YOLO and Intel RealSense depth to find a wall outlet and plug in, streamed live over Tailscale and Foxglove.',
     tags: ['ROS 2', 'Python', 'YOLO', 'Foxglove', 'Arduino', 'Robotics'],
     featured: true,
     url: 'https://devpost.com/software/forkbot',
@@ -31,6 +36,8 @@ export const projects: Project[] = [
     name: 'SC Robotics - University Rover Challenge',
     description:
       'Built the Foxglove mission control GUI for real-time rover monitoring and operation at the 2026 University Rover Challenge. Edited the System Acceptance Review video under extreme time pressure.',
+    seoDescription:
+      'Foxglove mission-control GUI for real-time monitoring and operation of the SC Robotics Mars rover at the 2026 University Rover Challenge.',
     tags: ['Foxglove', 'ROS 2', 'Python', 'Robotics'],
     featured: true,
     url: 'https://saddlebackcollegerobotics.com',
@@ -63,6 +70,8 @@ export const projects: Project[] = [
     name: 'LinkedIn Tracker',
     description:
       'Personal CRM for job seekers: track LinkedIn connections, manage outreach status, and let AI surface the right people at the right time. Integrates with OpenClaw via MCP.',
+    seoDescription:
+      'Personal CRM for job seekers: track LinkedIn connections, manage outreach, and let AI surface the right people at the right time.',
     tags: ['Next.js', 'Supabase', 'Cloudflare', 'TypeScript'],
     featured: true,
     url: 'https://linkedin-tracker.tylervovan.com',
